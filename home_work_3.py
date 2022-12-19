@@ -116,5 +116,6 @@ for letter in word:
     for k in data.keys():
         if letter.upper() in k:
             result += data[k]
+            break
 
 print(f'слово {word} стоит {result}')
