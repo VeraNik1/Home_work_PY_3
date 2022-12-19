@@ -101,6 +101,16 @@ print()
 
 # Ввод: ноутбук
 # Вывод: 12
+def points(num):
+    if num % 100 in [11, 12, 13, 14]:
+        return 'очков'
+    elif num % 10 == 1:
+        return 'очко'
+    elif num % 10 in [2, 3, 4]:
+        return 'очка'
+    else:
+        return 'очков'
+
 
 data = {'AEIOULNSTRАВЕИНОРСТ': 1, 'DGДКЛМПУ': 2, 'БГЁЬЯBCMP': 3, 'FHVWYЙЫ': 4, 'KЖЗХЦЧ': 5, 'JXФЩЪ': 8, 'QZФЩЪ': 10}
 result = 0
@@ -118,4 +128,6 @@ for letter in word:
             result += data[k]
             break
 
-print(f'слово {word} стоит {result}')
+print(f'слово {word} стоит {result} {points(result)}')
+
+
