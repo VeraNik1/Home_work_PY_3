@@ -10,12 +10,27 @@
 # -> 1
 import random
 
-# N = int(input('Введите длину массива >>> '))
-# A = [random.randint(0, 10) for _ in range(N)]
-# print('массив:', A)
-# X = int(input('Введите число X, количество которого будем искать в массиве А>>> '))
+while True:
+    try:
+        N = int(input("Введите длину массива >>> "))
+        if N > 0:
+            break
+        else:
+            raise Exception
 
-# print(f'Число X = {X} встречается в массиве A {A.count(X)} раз')
+    except:
+        print('Вы ввели не натуральное число, попробуйте еще раз')
+
+A = [random.randint(0, 10) for _ in range(N)]
+print('массив:', A)
+while True:
+    try:
+        X = int(input('Введите целое число X, количество которого будем искать в массиве А>>> '))
+        break
+    except:
+        print('Вы ввели не целое число, попробуйте еще раз')
+print(f'Число X = {X} встречается в массиве A {A.count(X)} раз\n')
+
 
 
 # Задача 18:
@@ -28,18 +43,37 @@ import random
 # 6
 
 # -> 7
+import random
 
-# N18 = int(input('Введите длину массива >>> '))
-# A18 = [random.randint(-10, 10) for _ in range(N18)] 
-# print('массив:', A18)
+while True:
+    try:
+        N18 = int(input('Введите длину массива >>> '))
+        if N18 > 0:
+            break
+        else:
+            raise Exception
 
-# X18 = int(input('Введите число X, количество, которое необходимо проверить>>> '))
-# Dict = {k: abs(k - X18) for k in set(A18)}
-# min_value = (min(Dict.values()))
-# print("Ближайшее число/числа: ")
-# for k, v in Dict.items():
-#     if v == min_value:
-#         print(k, end = ' ')
+    except:
+        print('Вы ввели не натуральное число, попробуйте еще раз')
+
+
+A18 = [random.randint(-10, 10) for _ in range(N18)] 
+print('массив:', A18)
+while True:
+    try:
+        X18 = int(input('Введите число X, количество, которое необходимо проверить>>> '))
+        break
+    except:
+        print('Вы ввели не целое число, попробуйте еще раз')
+
+Dict = {k: abs(k - X18) for k in set(A18)}
+min_value = (min(Dict.values()))
+print("Ближайшее число/числа: ")
+for k, v in Dict.items():
+    if v == min_value:
+        print(k, end = ' ')
+
+print()
 
 
 # Задача 20:
